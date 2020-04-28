@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>00229017_N-Capas_T_3</h1>
+	<form	method="post" th:action="@{/validForm}" th:object="${alumno}">
+	 	<ul th:if="${#fields.hasErrors('*')}">
+			<li th:each="err : ${#fields.errors('*')}" th:text="${err}" th:class="error" style="color: #FF0000">Input is incorrect</li>
+	  	</ul>
+	</form>
+	<a href="/ingresar">Ingresar Nuevo Alumno</a>
+</body>
+</html>

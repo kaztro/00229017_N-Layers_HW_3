@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Ingreso de nuevo alumno</title>
+</head>
+<body>
+	<h1>Ingreso de nuevo alumno<</h1>
+
+	<form th:action="@{/validForm}" th:object="${alumno}" method="post">
+		<label>Nombres: </label><input type="text" th:field="*{nombres}"><br>
+		<label>Apellidos: </label><input type="text" th:field="*{apellidos}"><br>
+		<label>Fecha de nacimiento: </label><input type="date" th:field="*{fNac}"><br>
+		<label>Lugar de nacimiento: </label><input type="text" th:field="*{lNac}"><br>
+		<label>Instituto o colegio de procedencia: </label><input type="text" th:field="*{cole}"><br>
+		<label>Numero de telefono: </label><input type="text" th:field="*{telF}"><br>
+		<label>Numero del movil: </label><input type="text" th:field="*{telM}"><br>
+		
+		<input type="submit" value="Guardar alumno">
+	</form>
+</body>
+</html>
